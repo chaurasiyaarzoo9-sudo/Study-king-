@@ -35,6 +35,17 @@
             color: #d1d5db;
         }
 
+        .made-by {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation:
+                fadeInUp 1.2s ease forwards,
+                glow 2.5s ease-in-out infinite alternate;
+        }
+
         .container {
             max-width: 950px;
             margin: 25px auto;
@@ -96,41 +107,31 @@
             text-align: center;
             padding: 22px 15px;
         }
-    </style> <style>
 
-    /* तुम्हारा पहले वाला CSS */
+        /* Made by animation */
 
-    .made-by { arzoo}
-        margin-top: 10px;
-        font-size: 16px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        opacity: 0;
-        animation: fadeInUp 1.2s ease forwards,
-                   glow 2.5s ease-in-out infinite alternate;
-   </style> }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
 
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(15px);
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
 
-    @keyframes glow {
-        from {
-            text-shadow: 0 0 2px rgba(255,255,255,0.3);
-        }
-        to {
-            text-shadow: 0 0 10px rgba(255,255,255,0.8);
-        }
-    }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 2px rgba(255,255,255,0.3);
+            }
 
-    
+            to {
+                text-shadow: 0 0 10px rgba(255,255,255,0.8);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -142,18 +143,23 @@
     <div class="made-by">Made by Arzoo</div>
 </header>
 
+
 <div class="container">
 
     <div class="welcome">
         <h2>Welcome to Study King 👑</h2>
+
         <p>
             Study Class 11 Commerce subjects and chapters
             in one place.
         </p>
     </div>
 
+
     <!-- ECONOMICS -->
+
     <div class="subject">
+
         <h2>📊 Economics</h2>
 
         <a class="chapter" href="economics-ch1-introduction.html">
@@ -184,8 +190,8 @@
             Chapter 7 — Revenue
         </a>
 
-        <a href="ch8.html" class="chapter-card">
-    Chapter 8 — Producer Behaviour / Supply
+        <a class="chapter" href="ch8.html">
+            Chapter 8 — Producer Behaviour / Supply
         </a>
 
         <a class="chapter" href="economics-ch9-perfect-competition.html">
@@ -195,11 +201,14 @@
         <a class="chapter" href="economics-ch10-market-equilibrium.html">
             Chapter 10 — Market Equilibrium
         </a>
+
     </div>
 
 
     <!-- ACCOUNTANCY -->
+
     <div class="subject">
+
         <h2>📒 Accountancy</h2>
 
         <a class="chapter soon" href="#">
@@ -217,29 +226,62 @@
         <a class="chapter soon" href="#">
             More chapters coming soon...
         </a>
+
     </div>
 
+<!-- BUSINESS STUDIES -->
 
-    <!-- BUSINESS STUDIES -->
-    <div class="subject">
-        <h2>🏢 Business Studies</h2>
+<div class="subject">
 
-        <a href="bst-ch1-nature-and-purpose-of-business.html" class="chapter-card">
-    Chapter 1 — Nature and Purpose of Business
-</a>
+    <h2>🏢 Business Studies</h2>
 
-       <a href="bst-ch2-forms-of-business-organisation.html" class="chapter-card">
-    Chapter 2 — Forms of Business Organisation
-</a> 
+    <a class="chapter" href="bst-ch1-nature-and-purpose-of-business.html">
+        Chapter 1 — Nature and Purpose of Business
+    </a>
 
-        <a class="chapter soon" href="#">
-            More chapters coming soon...
-        </a>
-    </div>
+    <a class="chapter" href="bst-ch2-forms-of-business-organisation.html">
+        Chapter 2 — Forms of Business Organisations
+    </a>
+
+    <a class="chapter" href="bst-ch3-public-private-global-enterprises.html">
+        Chapter 3 — Public, Private and Global Enterprises
+    </a>
+
+    <a class="chapter" href="bst-ch4-business-services.html">
+        Chapter 4 — Business Services
+    </a>
+
+    <a class="chapter" href="bst-ch5-emerging-modes-of-business.html">
+        Chapter 5 — Emerging Modes of Business
+    </a>
+
+    <a class="chapter" href="bst-ch6-social-responsibility-business-ethics.html">
+        Chapter 6 — Social Responsibility of Business and Business Ethics
+    </a>
+
+    <a class="chapter" href="bst-ch7-sources-of-business-finance.html">
+        Chapter 7 — Sources of Business Finance
+    </a>
+
+    <a class="chapter" href="bst-ch8-small-business.html">
+        Chapter 8 — Small Business
+    </a>
+
+    <a class="chapter" href="bst-ch9-internal-trade.html">
+        Chapter 9 — Internal Trade
+    </a>
+
+    <a class="chapter" href="bst-ch10-international-business.html">
+        Chapter 10 — International Business
+    </a>
+
+</div>
 
 
     <!-- PHYSICAL EDUCATION -->
+
     <div class="subject">
+
         <h2>🏃 Physical Education</h2>
 
         <a class="chapter soon" href="#">
@@ -253,20 +295,18 @@
         <a class="chapter soon" href="#">
             More chapters coming soon...
         </a>
+
     </div>
 
 </div>
 
 
 <footer>
+
     <p>© 2026 Study King</p>
     <p>Learn • Practice • Succeed 📚</p>
+
 </footer>
 
 </body>
 </html>
-
-
-
-
-
