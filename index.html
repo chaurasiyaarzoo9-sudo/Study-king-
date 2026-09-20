@@ -96,6 +96,40 @@
             text-align: center;
             padding: 22px 15px;
         }
+    </style> <style>
+
+    /* तुम्हारा पहले वाला CSS */
+
+    .made-by { arzoo}
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        opacity: 0;
+        animation: fadeInUp 1.2s ease forwards,
+                   glow 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 2px rgba(255,255,255,0.3);
+        }
+        to {
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+    }
+
     </style>
 </head>
 
@@ -104,6 +138,8 @@
 <header>
     <h1>📚 Study King</h1>
     <p>Class 11 Commerce Notes</p>
+
+    <div class="made-by">Made by Arzoo</div>
 </header>
 
 <div class="container">
