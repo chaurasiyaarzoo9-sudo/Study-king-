@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Accountancy Chapter 1 Notes | Study King</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#111827,#312e81);
+    color:white;
+    padding:28px 18px;
+    text-align:center;
+}
+
+header h1{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+header p{
+    color:#dbeafe;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    margin:18px 0;
+    padding:22px;
+    border-radius:14px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.card h2{
+    color:#3730a3;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#4f46e5;
+    margin:15px 0 8px;
+}
+
+ul{
+    padding-left:22px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,td{
+    border:1px solid #d1d5db;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#eef2ff;
+    color:#312e81;
+}
+
+.example{
+    background:#eff6ff;
+    border-left:5px solid #4f46e5;
+    padding:15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+.important{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 20px;
+    background:#4f46e5;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111827;
+    color:#d1d5db;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:23px;
+    }
+
+    .container{
+        padding:12px;
+    }
+
+    .card{
+        padding:17px;
+    }
+
+    table{
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📚 Accountancy – Chapter 1</h1>
+    <p>Introduction to Accounting | Complete Notes</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>1. Meaning of Accounting</h2>
+
+<p>
+Accounting is the process of identifying, measuring, recording,
+classifying, summarising, analysing and communicating financial
+information to the users of accounting information.
+</p>
+
+<div class="example">
+<strong>Simple Meaning:</strong><br>
+Accounting means systematically recording and summarising the
+financial transactions of a business and using that information
+for decision-making.
+</div>
+</div>
+
+<div class="card">
+<h2>2. Book-keeping and Accounting</h2>
+
+<h3>Book-keeping</h3>
+<p>
+Book-keeping is mainly concerned with the systematic recording
+of financial transactions in the books of accounts.
+</p>
+
+<h3>Accounting</h3>
+<p>
+Accounting is broader than book-keeping. It includes recording,
+classifying, summarising, analysing and interpreting financial
+information.
+</p>
+
+<table>
+<tr>
+<th>Basis</th>
+<th>Book-keeping</th>
+<th>Accounting</th>
+</tr>
+
+<tr>
+<td>Meaning</td>
+<td>Recording of transactions</td>
+<td>Recording, summarising and analysing information</td>
+</tr>
+
+<tr>
+<td>Scope</td>
+<td>Narrow</td>
+<td>Wider</td>
+</tr>
+
+<tr>
+<td>Purpose</td>
+<td>Maintain records</td>
+<td>Help in decision-making</td>
+</tr>
+</table>
+</div>
+
+<div class="card">
+<h2>3. Objectives of Accounting</h2>
+
+<ul>
+<li>To maintain systematic records of business transactions.</li>
+<li>To calculate profit or loss.</li>
+<li>To determine the financial position of the business.</li>
+<li>To provide useful information to users.</li>
+<li>To help management in decision-making.</li>
+<li>To provide information for planning and control.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>4. Functions of Accounting</h2>
+
+<h3>1. Recording</h3>
+<p>
+Business transactions are recorded systematically in the books
+of accounts.
+</p>
+
+<h3>2. Classification</h3>
+<p>
+Transactions of similar nature are grouped into appropriate
+accounts.
+</p>
+
+<h3>3. Summarising</h3>
+<p>
+Large amounts of accounting data are summarised through
+financial statements.
+</p>
+
+<h3>4. Analysis</h3>
+<p>
+Financial information is analysed to understand the performance
+and position of the business.
+</p>
+
+<h3>5. Interpretation</h3>
+<p>
+Accounting information is interpreted so that users can make
+appropriate decisions.
+</p>
+
+<h3>6. Communication</h3>
+<p>
+Useful financial information is communicated to interested users.
+</p>
+</div>
+
+<div class="card">
+<h2>5. Advantages of Accounting</h2>
+
+<ul>
+<li>Provides permanent records.</li>
+<li>Helps calculate profit or loss.</li>
+<li>Shows financial position.</li>
+<li>Helps management in decision-making.</li>
+<li>Helps in comparison of business performance.</li>
+<li>Provides information to owners and other users.</li>
+<li>Helps in planning and control.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>6. Limitations of Accounting</h2>
+
+<ul>
+<li>Only monetary transactions are recorded.</li>
+<li>Accounting is based on certain assumptions and conventions.</li>
+<li>It may involve estimates.</li>
+<li>Accounting information may not show the complete picture of a business.</li>
+<li>Different accounting policies can affect reported figures.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>7. Users of Accounting Information</h2>
+
+<table>
+<tr>
+<th>User</th>
+<th>Why They Need Information</th>
+</tr>
+
+<tr>
+<td>Owners</td>
+<td>To know profit, loss and financial position.</td>
+</tr>
+
+<tr>
+<td>Management</td>
+<td>For planning, controlling and decision-making.</td>
+</tr>
+
+<tr>
+<td>Investors</td>
+<td>To assess investment decisions.</td>
+</tr>
+
+<tr>
+<td>Creditors</td>
+<td>To assess the ability to repay amounts due.</td>
+</tr>
+
+<tr>
+<td>Banks</td>
+<td>To evaluate financial position before providing loans.</td>
+</tr>
+
+<tr>
+<td>Government</td>
+<td>For taxation and regulatory purposes.</td>
+</tr>
+
+<tr>
+<td>Employees</td>
+<td>To understand stability and performance of the organisation.</td>
+</tr>
+</table>
+</div>
+
+<div class="card">
+<h2>8. Basic Accounting Terms</h2>
+
+<h3>Business Transaction</h3>
+<p>
+An economic event involving a business that can be measured in
+money is called a business transaction.
+</p>
+
+<div class="example">
+Example: Goods purchased for ₹10,000 for business purposes.
+</div>
+
+<h3>Capital</h3>
+<p>
+Amount invested by the owner in the business is called capital.
+</p>
+
+<div class="example">
+Example: Arzoo starts a business with ₹50,000 cash.
+Here ₹50,000 is capital.
+</div>
+
+<h3>Drawings</h3>
+<p>
+Cash or goods withdrawn by the owner from the business for
+personal use are called drawings.
+</p>
+
+<h3>Assets</h3>
+<p>
+Assets are resources owned or controlled by a business that have
+economic value.
+</p>
+
+<p><strong>Examples:</strong> Cash, Bank balance, Furniture,
+Building, Machinery, Stock, Debtors.</p>
+
+<h3>Liabilities</h3>
+<p>
+Liabilities are amounts payable by the business to outsiders.
+</p>
+
+<p><strong>Examples:</strong> Creditors, Bank loan, Outstanding
+expenses.</p>
+
+<h3>Revenue</h3>
+<p>
+Revenue is the income generated from the normal activities of
+a business.
+</p>
+
+<h3>Expense</h3>
+<p>
+Expense is the cost incurred to earn revenue.
+</p>
+
+<h3>Income</h3>
+<p>
+Income refers to an increase in economic benefits during an
+accounting period.
+</p>
+
+<h3>Profit</h3>
+<p>
+When income is greater than expenses, the difference is profit.
+</p>
+
+<div class="example">
+<strong>Profit = Revenue − Expenses</strong>
+</div>
+
+<h3>Loss</h3>
+<p>
+When expenses are greater than revenue, the difference is loss.
+</p>
+
+<div class="example">
+<strong>Loss = Expenses − Revenue</strong>
+</div>
+
+<h3>Goods</h3>
+<p>
+Goods are items in which the business deals.
+</p>
+
+<h3>Purchases</h3>
+<p>
+Goods bought for resale are called purchases.
+</p>
+
+<h3>Sales</h3>
+<p>
+Goods sold by a business are called sales.
+</p>
+
+<h3>Debtor</h3>
+<p>
+A person who owes money to the business for goods or services
+sold on credit is called a debtor.
+</p>
+
+<h3>Creditor</h3>
+<p>
+A person to whom the business owes money for goods or services
+purchased on credit is called a creditor.
+</p>
+</div>
+
+<div class="card">
+<h2>9. Capital and Revenue Items</h2>
+
+<table>
+<tr>
+<th>Capital Item</th>
+<th>Revenue Item</th>
+</tr>
+
+<tr>
+<td>Generally provides long-term benefit</td>
+<td>Generally relates to current accounting period</td>
+</tr>
+
+<tr>
+<td>Example: Purchase of machinery</td>
+<td>Example: Salary expense</td>
+</tr>
+
+<tr>
+<td>Example: Purchase of building</td>
+<td>Example: Electricity expense</td>
+</tr>
+</table>
+</div>
+
+<div class="card">
+<h2>10. Accounting Equation</h2>
+
+<p>
+The basic accounting equation expresses the relationship between
+assets, liabilities and capital.
+</p>
+
+<div class="example">
+<strong>Assets = Capital + Liabilities</strong>
+</div>
+
+<h3>Example</h3>
+
+<p>
+If capital is ₹50,000 and liabilities are ₹20,000:
+</p>
+
+<div class="example">
+Assets = ₹50,000 + ₹20,000<br>
+<strong>Assets = ₹70,000</strong>
+</div>
+</div>
+
+<div class="card">
+<h2>11. Important Formulae</h2>
+
+<div class="example">
+<strong>Profit = Revenue − Expenses</strong>
+</div>
+
+<div class="example">
+<strong>Loss = Expenses − Revenue</strong>
+</div>
+
+<div class="example">
+<strong>Assets = Capital + Liabilities</strong>
+</div>
+
+<div class="example">
+<strong>Capital = Assets − Liabilities</strong>
+</div>
+
+<div class="example">
+<strong>Liabilities = Assets − Capital</strong>
+</div>
+</div>
+
+<div class="card">
+<h2>12. Quick Revision</h2>
+
+<ul>
+<li>Accounting records financial transactions.</li>
+<li>Book-keeping mainly deals with recording transactions.</li>
+<li>Accounting has a wider scope than book-keeping.</li>
+<li>Assets are economic resources of a business.</li>
+<li>Liabilities are obligations payable by the business.</li>
+<li>Capital represents the owner's investment.</li>
+<li>Drawings reduce owner's capital.</li>
+<li>Profit occurs when income exceeds expenses.</li>
+<li>The basic equation is Assets = Capital + Liabilities.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>13. Important Questions</h2>
+
+<div class="important">
+<strong>Q1.</strong> What is accounting? Explain its objectives.
+</div>
+
+<div class="important">
+<strong>Q2.</strong> Distinguish between book-keeping and accounting.
+</div>
+
+<div class="important">
+<strong>Q3.</strong> Explain the functions of accounting.
+</div>
+
+<div class="important">
+<strong>Q4.</strong> Who are the users of accounting information?
+</div>
+
+<div class="important">
+<strong>Q5.</strong> Explain assets, liabilities, capital and drawings.
+</div>
+
+<div class="important">
+<strong>Q6.</strong> Explain the accounting equation with an example.
+</div>
+
+<div class="important">
+<strong>Q7.</strong> Distinguish between revenue and capital items.
+</div>
+</div>
+
+<a href="accountancy.html" class="back-btn">
+← Back to Accountancy
+</a>
+
+</div>
+
+<footer>
+<p>📚 Study King | Class 11 Commerce</p>
+<p>Made by Arzoo</p>
+</footer>
+
+</body>
+</html>
