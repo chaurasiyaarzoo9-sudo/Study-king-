@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +14,74 @@
             padding: 0;
         }
 
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: #f4f7fb;
             color: #222;
         }
+
+        /* =========================
+           STUDY KING SPLASH SCREEN
+           ========================= */
+
+        #studyKingSplash {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+
+            width: 100vw !important;
+            height: 100vh !important;
+
+            background: #020b2b !important;
+
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+
+            overflow: hidden !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+
+            z-index: 2147483647 !important;
+
+            opacity: 1;
+            visibility: visible;
+
+            transition:
+                opacity 0.6s ease,
+                visibility 0.6s ease;
+        }
+
+        #studyKingSplash img {
+            display: block !important;
+
+            width: 100vw !important;
+            height: 100vh !important;
+
+            object-fit: cover !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        #studyKingSplash.hide {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+
+        /* =========================
+           HEADER
+           ========================= */
 
         header {
             background: #111827;
@@ -35,16 +99,24 @@
             color: #d1d5db;
         }
 
+        /* Made by Arzoo */
+
         .made-by {
             margin-top: 10px;
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 1px;
+
             opacity: 0;
+
             animation:
                 fadeInUp 1.2s ease forwards,
                 glow 2.5s ease-in-out infinite alternate;
         }
+
+        /* =========================
+           MAIN CONTAINER
+           ========================= */
 
         .container {
             max-width: 950px;
@@ -66,6 +138,10 @@
             margin-bottom: 8px;
         }
 
+        /* =========================
+           SUBJECT CARDS
+           ========================= */
+
         .subject {
             background: white;
             padding: 20px;
@@ -79,15 +155,24 @@
             margin-bottom: 15px;
         }
 
+        /* =========================
+           CHAPTER BUTTONS
+           ========================= */
+
         .chapter {
             display: block;
+
             background: #eff6ff;
             color: #111827;
+
             text-decoration: none;
+
             padding: 13px 15px;
             margin: 9px 0;
+
             border-radius: 9px;
             border-left: 4px solid #2563eb;
+
             transition: 0.2s;
         }
 
@@ -100,16 +185,75 @@
             opacity: 0.65;
         }
 
+        /* Accountancy chapter card */
+
+        .chapter-card {
+            margin: 9px 0;
+        }
+
+        .chapter-card a {
+            display: block;
+
+            background: #eff6ff;
+            color: #111827;
+
+            text-decoration: none;
+
+            padding: 13px 15px;
+
+            border-radius: 9px;
+            border-left: 4px solid #2563eb;
+
+            transition: 0.2s;
+        }
+
+        .chapter-card a:hover {
+            background: #dbeafe;
+            transform: translateX(3px);
+        }
+
+        /* =========================
+           FOOTER
+           ========================= */
+
         footer {
             margin-top: 30px;
+
             background: #111827;
             color: white;
+
             text-align: center;
+
             padding: 22px 15px;
         }
 
+        /* =========================
+           APK DOWNLOAD BUTTON
+           ========================= */
 
-                /* Made by animation */
+        .apk-download-btn {
+            display: inline-block;
+
+            background: #4f46e5;
+            color: white;
+
+            padding: 13px 22px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .apk-download-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           ANIMATIONS
+           ========================= */
 
         @keyframes fadeInUp {
             from {
@@ -132,260 +276,287 @@
                 text-shadow: 0 0 10px rgba(255,255,255,0.8);
             }
         }
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto 12px;
-            border-radius: 50%;
-            animation: logoGlow 2.5s ease-in-out infinite alternate;
-        }
-        }
-       .apk-download-btn {
-    display: inline-block;
-    background: #4f46e5;
-    color: white;
-    padding: 13px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.apk-download-btn:hover {
-    transform: translateY(-2px);
-} 
-        #studyKingSplash {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100vh;
-    background: #020b2b;
-    z-index: 999999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-#studyKingSplash img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#studyKingSplash.hide {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
     </style>
-</head> 
-    
+</head>
 
 <body>
 
-    <body>
+    <!-- =========================
+         LOADING / SPLASH SCREEN
+         ========================= -->
 
-<div id="studyKingSplash">
-    <img src="./assets/study-king-splash.png" alt="Study King Loading">
-</div>
+    <div id="studyKingSplash">
+        <img
+            src="./assets/study-king-splash.png"
+            alt="Study King Loading"
+        >
+    </div>
 
-<header>
-    <h1>📚 Study King</h1>
-    <p>Class 11 Commerce wallah</p>
-    <div class="made-by">Made by Arzoo</div>
-</header>
- 
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
     <header>
-    <h1>📚 Study King</h1>
-    <p>Class 11 Commerce wallah</p>
-    <div class="made-by">Made by Arzoo</div>
-</header>
+        <h1>📚 Study King</h1>
+
+        <p>Class 11 Commerce wallah</p>
+
+        <div class="made-by">
+            Made by Arzoo
+        </div>
+    </header>
 
 
-<div class="container">
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
 
-    <div class="welcome">
-        <h2>Welcome to Study King 👑</h2>
+    <div class="container">
+
+        <!-- WELCOME -->
+
+        <div class="welcome">
+
+            <h2>Welcome to Study King 👑</h2>
+
+            <p>
+                Study Class 11 Commerce subjects and chapters
+                in one place.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             ECONOMICS
+             ========================= -->
+
+        <div class="subject">
+
+            <h2>📊 Economics</h2>
+
+            <a class="chapter"
+               href="economics-ch1-introduction.html">
+                Chapter 1 — Introduction to Micro Economics
+            </a>
+
+            <a class="chapter"
+               href="economics-ch2-consumer-equilibrium.html">
+                Chapter 2 — Consumer's Equilibrium
+            </a>
+
+            <a class="chapter"
+               href="economics-ch3-demand-notes.html">
+                Chapter 3 — Demand
+            </a>
+
+            <a class="chapter"
+               href="economics-ch4-elasticity-demand.html">
+                Chapter 4 — Elasticity of Demand
+            </a>
+
+            <a class="chapter"
+               href="economics-ch5-production-function.html">
+                Chapter 5 — Production Function
+            </a>
+
+            <a class="chapter"
+               href="economics-ch6-cost.html">
+                Chapter 6 — Cost
+            </a>
+
+            <a class="chapter"
+               href="economics-ch7-revenue.html">
+                Chapter 7 — Revenue
+            </a>
+
+            <a class="chapter"
+               href="ch8.html">
+                Chapter 8 — Producer Behaviour / Supply
+            </a>
+
+            <a class="chapter"
+               href="economics-ch9-perfect-competition.html">
+                Chapter 9 — Perfect Competition
+            </a>
+
+            <a class="chapter"
+               href="economics-ch10-market-equilibrium.html">
+                Chapter 10 — Market Equilibrium
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             ACCOUNTANCY
+             ========================= -->
+
+        <div class="subject">
+
+            <h2>📒 Accountancy</h2>
+
+            <div class="chapter-card">
+                <a href="accountancy-ch1-notes.html">
+                    Chapter 1 — Theory of Accounting
+                </a>
+            </div>
+
+            <a class="chapter soon" href="#">
+                Chapter 2 — Theory Base of Accounting
+            </a>
+
+            <a class="chapter soon" href="#">
+                Chapter 3 — Recording of Transactions
+            </a>
+
+            <a class="chapter soon" href="#">
+                More chapters coming soon...
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             BUSINESS STUDIES
+             ========================= -->
+
+        <div class="subject">
+
+            <h2>🏢 Business Studies</h2>
+
+            <a class="chapter"
+               href="bst-ch1-nature-and-purpose-of-business.html">
+                Chapter 1 — Nature and Purpose of Business
+            </a>
+
+            <a class="chapter"
+               href="bst-ch2-forms-of-business-organisation.html">
+                Chapter 2 — Forms of Business Organisations
+            </a>
+
+            <a class="chapter"
+               href="bst-ch3-public-private-global-enterprises.html">
+                Chapter 3 — Public, Private and Global Enterprises
+            </a>
+
+            <a class="chapter"
+               href="bst-ch4-business-services.html">
+                Chapter 4 — Business Services
+            </a>
+
+            <a class="chapter"
+               href="bst-ch5-emerging-modes-of-business.html">
+                Chapter 5 — Emerging Modes of Business
+            </a>
+
+            <a class="chapter"
+               href="bst-ch6-social-responsibility-business-ethics.html">
+                Chapter 6 — Social Responsibility of Business and Business Ethics
+            </a>
+
+            <a class="chapter"
+               href="bst-ch7-sources-of-business-finance.html">
+                Chapter 7 — Sources of Business Finance
+            </a>
+
+            <a class="chapter"
+               href="bst-ch8-small-business.html">
+                Chapter 8 — Small Business
+            </a>
+
+            <a class="chapter"
+               href="bst-ch9-internal-trade.html">
+                Chapter 9 — Internal Trade
+            </a>
+
+            <a class="chapter"
+               href="bst-ch10-international-business.html">
+                Chapter 10 — International Business
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             PHYSICAL EDUCATION
+             ========================= -->
+
+        <div class="subject">
+
+            <h2>🏃 Physical Education</h2>
+
+            <a class="chapter soon" href="#">
+                Chapter 1 — Changing Trends & Career in Physical Education
+            </a>
+
+            <a class="chapter soon" href="#">
+                Chapter 2 — Olympic Value Education
+            </a>
+
+            <a class="chapter soon" href="#">
+                More chapters coming soon...
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <p>© 2026 Study King</p>
 
         <p>
-            Study Class 11 Commerce subjects and chapters
-            in one place.
+            Learn • Practice • Succeed 📚
         </p>
-    </div>
+
+        <div style="text-align:center; margin:30px 0;">
+
+            <a
+                href="study-king.apk"
+                download
+                class="apk-download-btn"
+            >
+                📱 Download Study King App
+            </a>
+
+        </div>
+
+    </footer>
 
 
-    <!-- ECONOMICS -->
+    <!-- =========================
+         SPLASH SCREEN JAVASCRIPT
+         ========================= -->
 
-    <div class="subject">
-
-        <h2>📊 Economics</h2>
-
-        <a class="chapter" href="economics-ch1-introduction.html">
-            Chapter 1 — Introduction to Micro Economics
-        </a>
-
-        <a class="chapter" href="economics-ch2-consumer-equilibrium.html">
-            Chapter 2 — Consumer's Equilibrium
-        </a>
-
-        <a class="chapter" href="economics-ch3-demand-notes.html">
-            Chapter 3 — Demand
-        </a>
-
-        <a class="chapter" href="economics-ch4-elasticity-demand.html">
-            Chapter 4 — Elasticity of Demand
-        </a>
-
-        <a class="chapter" href="economics-ch5-production-function.html">
-            Chapter 5 — Production Function
-        </a>
-
-        <a class="chapter" href="economics-ch6-cost.html">
-            Chapter 6 — Cost
-        </a>
-
-        <a class="chapter" href="economics-ch7-revenue.html">
-            Chapter 7 — Revenue
-        </a>
-
-        <a class="chapter" href="ch8.html">
-            Chapter 8 — Producer Behaviour / Supply
-        </a>
-
-        <a class="chapter" href="economics-ch9-perfect-competition.html">
-            Chapter 9 — Perfect Competition
-        </a>
-
-        <a class="chapter" href="economics-ch10-market-equilibrium.html">
-            Chapter 10 — Market Equilibrium
-        </a>
-
-    </div>
-
-
-    <!-- ACCOUNTANCY -->
-
-    <div class="subject">
-
-        <h2>📒 Accountancy</h2>
-
-        <div class="chapter-card">
-    <a href="accountancy-ch1-notes.html">
-        Chapter 1 – Theory of Accounting
-    </a>
-</div>
-
-        <a class="chapter soon" href="#">
-            Chapter 2 — Theory Base of Accounting
-        </a>
-
-        <a class="chapter soon" href="#">
-            Chapter 3 — Recording of Transactions
-        </a>
-
-        <a class="chapter soon" href="#">
-            More chapters coming soon...
-        </a>
-
-    </div>
-
-<!-- BUSINESS STUDIES -->
-
-<div class="subject">
-
-    <h2>🏢 Business Studies</h2>
-
-    <a class="chapter" href="bst-ch1-nature-and-purpose-of-business.html">
-        Chapter 1 — Nature and Purpose of Business
-    </a>
-
-    <a class="chapter" href="bst-ch2-forms-of-business-organisation.html">
-        Chapter 2 — Forms of Business Organisations
-    </a>
-
-    <a class="chapter" href="bst-ch3-public-private-global-enterprises.html">
-        Chapter 3 — Public, Private and Global Enterprises
-    </a>
-
-    <a class="chapter" href="bst-ch4-business-services.html">
-        Chapter 4 — Business Services
-    </a>
-
-    <a class="chapter" href="bst-ch5-emerging-modes-of-business.html">
-        Chapter 5 — Emerging Modes of Business
-    </a>
-
-    <a class="chapter" href="bst-ch6-social-responsibility-business-ethics.html">
-        Chapter 6 — Social Responsibility of Business and Business Ethics
-    </a>
-
-    <a class="chapter" href="bst-ch7-sources-of-business-finance.html">
-        Chapter 7 — Sources of Business Finance
-    </a>
-
-    <a class="chapter" href="bst-ch8-small-business.html">
-        Chapter 8 — Small Business
-    </a>
-
-    <a class="chapter" href="bst-ch9-internal-trade.html">
-        Chapter 9 — Internal Trade
-    </a>
-
-    <a class="chapter" href="bst-ch10-international-business.html">
-        Chapter 10 — International Business
-    </a>
-
-</div>
-
-
-    <!-- PHYSICAL EDUCATION -->
-
-    <div class="subject">
-
-        <h2>🏃 Physical Education</h2>
-
-        <a class="chapter soon" href="#">
-            Chapter 1 — Changing Trends & Career in Physical Education
-        </a>
-
-        <a class="chapter soon" href="#">
-            Chapter 2 — Olympic Value Education
-        </a>
-
-        <a class="chapter soon" href="#">
-            More chapters coming soon...
-        </a>
-
-    </div>
-
-</div>
-
-
-<footer>
-
-    <p>© 2026 Study King</p>
-    <p>Learn • Practice • Succeed 📚</p>
- 
-    <div style="text-align:center; margin:30px 0;">
-    <a href="study-king.apk" download class="apk-download-btn">
-        📱 Download Study King App
-</footer>
-
-    </a>
-</div> 
     <script>
-window.addEventListener("load", function () {
-    setTimeout(function () {
-        const splash = document.getElementById("studyKingSplash");
+        document.addEventListener("DOMContentLoaded", function () {
 
-        if (splash) {
-            splash.classList.add("hide");
-        }
-    }, 2200);
-});
-</script>
+            setTimeout(function () {
+
+                const splash =
+                    document.getElementById("studyKingSplash");
+
+                if (splash) {
+
+                    splash.classList.add("hide");
+
+                    setTimeout(function () {
+                        splash.remove();
+                    }, 700);
+
+                }
+
+            }, 2000);
+
+        });
+    </script>
+
 </body>
-</html>
+</html>    
