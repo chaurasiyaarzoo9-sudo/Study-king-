@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,31 +26,28 @@
         }
 
         /* =========================
-           STUDY KING SPLASH SCREEN
+           SPLASH SCREEN
            ========================= */
 
         #studyKingSplash {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
+            position: fixed;
+            inset: 0;
 
-            width: 100vw !important;
-            height: 100vh !important;
+            width: 100vw;
+            height: 100vh;
 
-            background: #020b2b !important;
+            background: #020b2b;
 
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            overflow: hidden !important;
+            overflow: hidden;
 
-            margin: 0 !important;
-            padding: 0 !important;
+            margin: 0;
+            padding: 0;
 
-            z-index: 2147483647 !important;
+            z-index: 999999;
 
             opacity: 1;
             visibility: visible;
@@ -62,21 +58,21 @@
         }
 
         #studyKingSplash img {
-            display: block !important;
+            display: block;
 
-            width: 100vw !important;
-            height: 100vh !important;
+            width: 100%;
+            height: 100%;
 
-            object-fit: cover !important;
+            object-fit: cover;
 
-            margin: 0 !important;
-            padding: 0 !important;
+            margin: 0;
+            padding: 0;
         }
 
         #studyKingSplash.hide {
-            opacity: 0 !important;
-            visibility: hidden !important;
-            pointer-events: none !important;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
         }
 
         /* =========================
@@ -124,12 +120,17 @@
             padding: 0 15px;
         }
 
+        /* =========================
+           WELCOME
+           ========================= */
+
         .welcome {
             background: white;
             padding: 25px;
             border-radius: 15px;
             text-align: center;
             margin-bottom: 25px;
+
             box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
@@ -138,21 +139,120 @@
             margin-bottom: 8px;
         }
 
+        .welcome p {
+            line-height: 1.6;
+        }
+
         /* =========================
            SUBJECT CARDS
            ========================= */
 
         .subject {
             background: white;
+
             padding: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
+
             border-radius: 15px;
+
             box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+            overflow: hidden;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
-        .subject h2 {
+        .subject:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Subject heading */
+
+        .subject-title {
             color: #2563eb;
-            margin-bottom: 15px;
+
+            margin: 0;
+
+            padding: 5px 40px 5px 0;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            position: relative;
+
+            user-select: none;
+        }
+
+        /* Plus / Minus */
+
+        .subject-title::after {
+            content: "+";
+
+            position: absolute;
+
+            right: 5px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 30px;
+            height: 30px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #eff6ff;
+            color: #2563eb;
+
+            font-size: 22px;
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+        /* Open subject */
+
+        .subject.open {
+            box-shadow: 0 6px 20px rgba(37,99,235,0.14);
+        }
+
+        .subject.open .subject-title::after {
+            content: "−";
+            background: #2563eb;
+            color: white;
+        }
+
+        /* =========================
+           CHAPTER AREA
+           ========================= */
+
+        .chapters {
+            max-height: 0;
+
+            overflow: hidden;
+
+            opacity: 0;
+
+            transition:
+                max-height 0.45s ease,
+                opacity 0.3s ease;
+
+            margin-top: 0;
+        }
+
+        .subject.open .chapters {
+            max-height: 2000px;
+
+            opacity: 1;
+
+            margin-top: 15px;
         }
 
         /* =========================
@@ -167,49 +267,42 @@
 
             text-decoration: none;
 
-            padding: 13px 15px;
+            padding: 14px 15px;
+
             margin: 9px 0;
 
             border-radius: 9px;
+
             border-left: 4px solid #2563eb;
 
-            transition: 0.2s;
+            line-height: 1.4;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
         }
 
         .chapter:hover {
             background: #dbeafe;
-            transform: translateX(3px);
+            transform: translateX(4px);
         }
+
+        .chapter:active {
+            transform: scale(0.98);
+        }
+
+        /* =========================
+           COMING SOON
+           ========================= */
 
         .soon {
             opacity: 0.65;
+            cursor: default;
         }
 
-        /* Accountancy chapter card */
-
-        .chapter-card {
-            margin: 9px 0;
-        }
-
-        .chapter-card a {
-            display: block;
-
+        .soon:hover {
+            transform: none;
             background: #eff6ff;
-            color: #111827;
-
-            text-decoration: none;
-
-            padding: 13px 15px;
-
-            border-radius: 9px;
-            border-left: 4px solid #2563eb;
-
-            transition: 0.2s;
-        }
-
-        .chapter-card a:hover {
-            background: #dbeafe;
-            transform: translateX(3px);
         }
 
         /* =========================
@@ -227,6 +320,10 @@
             padding: 22px 15px;
         }
 
+        footer p {
+            margin: 5px 0;
+        }
+
         /* =========================
            APK DOWNLOAD BUTTON
            ========================= */
@@ -242,6 +339,7 @@
             border-radius: 10px;
 
             text-decoration: none;
+
             font-weight: bold;
 
             transition: 0.3s;
@@ -249,6 +347,11 @@
 
         .apk-download-btn:hover {
             transform: translateY(-2px);
+            background: #4338ca;
+        }
+
+        .apk-download-btn:active {
+            transform: scale(0.97);
         }
 
         /* =========================
@@ -276,20 +379,59 @@
                 text-shadow: 0 0 10px rgba(255,255,255,0.8);
             }
         }
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 25px 12px;
+            }
+
+            header h1 {
+                font-size: 29px;
+            }
+
+            .container {
+                margin: 18px auto;
+                padding: 0 12px;
+            }
+
+            .welcome {
+                padding: 20px 15px;
+            }
+
+            .subject {
+                padding: 17px;
+            }
+
+            .subject-title {
+                font-size: 20px;
+            }
+
+            .chapter {
+                font-size: 15px;
+                padding: 13px 12px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <!-- =========================
-         LOADING / SPLASH SCREEN
+         SPLASH SCREEN
          ========================= -->
 
     <div id="studyKingSplash">
+
         <img
             src="./assets/study-king-splash.png"
             alt="Study King Loading"
         >
+
     </div>
 
 
@@ -298,6 +440,7 @@
          ========================= -->
 
     <header>
+
         <h1>📚 Study King</h1>
 
         <p>Class 11 Commerce wallah</p>
@@ -305,6 +448,7 @@
         <div class="made-by">
             Made by Arzoo
         </div>
+
     </header>
 
 
@@ -312,196 +456,220 @@
          MAIN CONTENT
          ========================= -->
 
-    <div class="container">
+    <main class="container">
+
 
         <!-- WELCOME -->
 
-        <div class="welcome">
+        <section class="welcome">
 
             <h2>Welcome to Study King 👑</h2>
 
             <p>
-                Study Class 11 Commerce subjects and chapters
-                in one place.
+                Select a subject to see its chapters.
             </p>
 
-        </div>
+        </section>
 
 
         <!-- =========================
              ECONOMICS
              ========================= -->
 
-        <div class="subject">
+        <section class="subject">
 
-            <h2>📊 Economics</h2>
+            <h2 class="subject-title">
+                📊 Economics
+            </h2>
 
-            <a class="chapter"
-               href="economics-ch1-introduction.html">
-                Chapter 1 — Introduction to Micro Economics
-            </a>
+            <div class="chapters">
 
-            <a class="chapter"
-               href="economics-ch2-consumer-equilibrium.html">
-                Chapter 2 — Consumer's Equilibrium
-            </a>
+                <a class="chapter"
+                   href="economics-ch1-introduction.html">
+                    Chapter 1 — Introduction to Micro Economics
+                </a>
 
-            <a class="chapter"
-               href="economics-ch3-demand-notes.html">
-                Chapter 3 — Demand
-            </a>
+                <a class="chapter"
+                   href="economics-ch2-consumer-equilibrium.html">
+                    Chapter 2 — Consumer's Equilibrium
+                </a>
 
-            <a class="chapter"
-               href="economics-ch4-elasticity-demand.html">
-                Chapter 4 — Elasticity of Demand
-            </a>
+                <a class="chapter"
+                   href="economics-ch3-demand-notes.html">
+                    Chapter 3 — Demand
+                </a>
 
-            <a class="chapter"
-               href="economics-ch5-production-function.html">
-                Chapter 5 — Production Function
-            </a>
+                <a class="chapter"
+                   href="economics-ch4-elasticity-demand.html">
+                    Chapter 4 — Elasticity of Demand
+                </a>
 
-            <a class="chapter"
-               href="economics-ch6-cost.html">
-                Chapter 6 — Cost
-            </a>
+                <a class="chapter"
+                   href="economics-ch5-production-function.html">
+                    Chapter 5 — Production Function
+                </a>
 
-            <a class="chapter"
-               href="economics-ch7-revenue.html">
-                Chapter 7 — Revenue
-            </a>
+                <a class="chapter"
+                   href="economics-ch6-cost.html">
+                    Chapter 6 — Cost
+                </a>
 
-            <a class="chapter"
-               href="ch8.html">
-                Chapter 8 — Producer Behaviour / Supply
-            </a>
+                <a class="chapter"
+                   href="economics-ch7-revenue.html">
+                    Chapter 7 — Revenue
+                </a>
 
-            <a class="chapter"
-               href="economics-ch9-perfect-competition.html">
-                Chapter 9 — Perfect Competition
-            </a>
+                <a class="chapter"
+                   href="ch8.html">
+                    Chapter 8 — Producer Behaviour / Supply
+                </a>
 
-            <a class="chapter"
-               href="economics-ch10-market-equilibrium.html">
-                Chapter 10 — Market Equilibrium
-            </a>
+                <a class="chapter"
+                   href="economics-ch9-perfect-competition.html">
+                    Chapter 9 — Perfect Competition
+                </a>
 
-        </div>
+                <a class="chapter"
+                   href="economics-ch10-market-equilibrium.html">
+                    Chapter 10 — Market Equilibrium
+                </a>
+
+            </div>
+
+        </section>
 
 
         <!-- =========================
              ACCOUNTANCY
              ========================= -->
 
-        <div class="subject">
+        <section class="subject">
 
-            <h2>📒 Accountancy</h2>
+            <h2 class="subject-title">
+                📒 Accountancy
+            </h2>
 
-            <div class="chapter-card">
-                <a href="accountancy-ch1-notes.html">
+            <div class="chapters">
+
+                <a class="chapter"
+                   href="accountancy-ch1-notes.html">
                     Chapter 1 — Theory of Accounting
                 </a>
+
+                <div class="chapter soon">
+                    Chapter 2 — Theory Base of Accounting
+                </div>
+
+                <div class="chapter soon">
+                    Chapter 3 — Recording of Transactions
+                </div>
+
+                <div class="chapter soon">
+                    More chapters coming soon...
+                </div>
+
             </div>
 
-            <a class="chapter soon" href="#">
-                Chapter 2 — Theory Base of Accounting
-            </a>
-
-            <a class="chapter soon" href="#">
-                Chapter 3 — Recording of Transactions
-            </a>
-
-            <a class="chapter soon" href="#">
-                More chapters coming soon...
-            </a>
-
-        </div>
+        </section>
 
 
         <!-- =========================
              BUSINESS STUDIES
              ========================= -->
 
-        <div class="subject">
+        <section class="subject">
 
-            <h2>🏢 Business Studies</h2>
+            <h2 class="subject-title">
+                🏢 Business Studies
+            </h2>
 
-            <a class="chapter"
-               href="bst-ch1-nature-and-purpose-of-business.html">
-                Chapter 1 — Nature and Purpose of Business
-            </a>
+            <div class="chapters">
 
-            <a class="chapter"
-               href="bst-ch2-forms-of-business-organisation.html">
-                Chapter 2 — Forms of Business Organisations
-            </a>
+                <a class="chapter"
+                   href="bst-ch1-nature-and-purpose-of-business.html">
+                    Chapter 1 — Nature and Purpose of Business
+                </a>
 
-            <a class="chapter"
-               href="bst-ch3-public-private-global-enterprises.html">
-                Chapter 3 — Public, Private and Global Enterprises
-            </a>
+                <a class="chapter"
+                   href="bst-ch2-forms-of-business-organisation.html">
+                    Chapter 2 — Forms of Business Organisations
+                </a>
 
-            <a class="chapter"
-               href="bst-ch4-business-services.html">
-                Chapter 4 — Business Services
-            </a>
+                <a class="chapter"
+                   href="bst-ch3-public-private-global-enterprises.html">
+                    Chapter 3 — Public, Private and Global Enterprises
+                </a>
 
-            <a class="chapter"
-               href="bst-ch5-emerging-modes-of-business.html">
-                Chapter 5 — Emerging Modes of Business
-            </a>
+                <a class="chapter"
+                   href="bst-ch4-business-services.html">
+                    Chapter 4 — Business Services
+                </a>
 
-            <a class="chapter"
-               href="bst-ch6-social-responsibility-business-ethics.html">
-                Chapter 6 — Social Responsibility of Business and Business Ethics
-            </a>
+                <a class="chapter"
+                   href="bst-ch5-emerging-modes-of-business.html">
+                    Chapter 5 — Emerging Modes of Business
+                </a>
 
-            <a class="chapter"
-               href="bst-ch7-sources-of-business-finance.html">
-                Chapter 7 — Sources of Business Finance
-            </a>
+                <a class="chapter"
+                   href="bst-ch6-social-responsibility-business-ethics.html">
+                    Chapter 6 — Social Responsibility of Business and Business Ethics
+                </a>
 
-            <a class="chapter"
-               href="bst-ch8-small-business.html">
-                Chapter 8 — Small Business
-            </a>
+                <a class="chapter"
+                   href="bst-ch7-sources-of-business-finance.html">
+                    Chapter 7 — Sources of Business Finance
+                </a>
 
-            <a class="chapter"
-               href="bst-ch9-internal-trade.html">
-                Chapter 9 — Internal Trade
-            </a>
+                <a class="chapter"
+                   href="bst-ch8-small-business.html">
+                    Chapter 8 — Small Business
+                </a>
 
-            <a class="chapter"
-               href="bst-ch10-international-business.html">
-                Chapter 10 — International Business
-            </a>
+                <a class="chapter"
+                   href="bst-ch9-internal-trade.html">
+                    Chapter 9 — Internal Trade
+                </a>
 
-        </div>
+                <a class="chapter"
+                   href="bst-ch10-international-business.html">
+                    Chapter 10 — International Business
+                </a>
+
+            </div>
+
+        </section>
 
 
         <!-- =========================
              PHYSICAL EDUCATION
              ========================= -->
 
-        <div class="subject">
+        <section class="subject">
 
-            <h2>🏃 Physical Education</h2>
+            <h2 class="subject-title">
+                🏃 Physical Education
+            </h2>
 
-            <a class="chapter soon" href="#">
-                Chapter 1 — Changing Trends & Career in Physical Education
-            </a>
+            <div class="chapters">
 
-            <a class="chapter soon" href="#">
-                Chapter 2 — Olympic Value Education
-            </a>
+                <div class="chapter soon">
+                    Chapter 1 — Changing Trends & Career in Physical Education
+                </div>
 
-            <a class="chapter soon" href="#">
-                More chapters coming soon...
-            </a>
+                <div class="chapter soon">
+                    Chapter 2 — Olympic Value Education
+                </div>
 
-        </div>
+                <div class="chapter soon">
+                    More chapters coming soon...
+                </div>
 
-    </div>
+            </div>
+
+        </section>
+
+
+    </main>
 
 
     <!-- =========================
@@ -532,31 +700,93 @@
 
 
     <!-- =========================
-         SPLASH SCREEN JAVASCRIPT
+         JAVASCRIPT
          ========================= -->
 
     <script>
+
         document.addEventListener("DOMContentLoaded", function () {
+
+
+            /* =========================
+               SUBJECT OPEN / CLOSE
+               ========================= */
+
+            const subjects =
+                document.querySelectorAll(".subject");
+
+
+            subjects.forEach(function (subject) {
+
+                const title =
+                    subject.querySelector(".subject-title");
+
+
+                if (!title) {
+                    return;
+                }
+
+
+                title.addEventListener("click", function () {
+
+
+                    const alreadyOpen =
+                        subject.classList.contains("open");
+
+
+                    /* Close every subject */
+
+                    subjects.forEach(function (item) {
+
+                        item.classList.remove("open");
+
+                    });
+
+
+                    /* Open clicked subject */
+
+                    if (!alreadyOpen) {
+
+                        subject.classList.add("open");
+
+                    }
+
+                });
+
+            });
+
+
+            /* =========================
+               SPLASH SCREEN
+               ========================= */
 
             setTimeout(function () {
 
                 const splash =
                     document.getElementById("studyKingSplash");
 
+
                 if (splash) {
 
                     splash.classList.add("hide");
 
+
                     setTimeout(function () {
-                        splash.remove();
+
+                        if (splash) {
+                            splash.remove();
+                        }
+
                     }, 700);
 
                 }
 
             }, 2000);
 
+
         });
+
     </script>
 
 </body>
-</html>    
+</html>
